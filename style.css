@@ -1,0 +1,154 @@
+/* Clean, Colorful Portfolio CSS */
+
+/* Base Reset */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Header with Gradient */
+header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 1px;
+    font-family: Georgia;
+    color: black;
+    font-weight: bolder;
+}
+
+header nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+header nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ffe082;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+/* Section Cards */
+section {
+    background: #ffffffdd;
+    backdrop-filter: blur(6px);
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Profile Image */
+.profile-img {
+    width: 220px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    float: left;
+    margin: 0 20px 20px 0;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    border: 4px solid #6a11cb;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+/* Headings */
+h1, h2 {
+    color: #333;
+    font-weight: 600;
+}
+
+ul {
+    list-style: square inside;
+    padding-left: 0;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Footer with Gradient */
+footer {
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+footer a {
+    color: #ffe082;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+    .profile-img {
+        float: none;
+        display: block;
+        margin: 0 auto 15px auto;
+    }
+    header nav {
+        flex-direction: column;
+    }
+}
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
